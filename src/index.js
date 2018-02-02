@@ -4,5 +4,10 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+function renderVelocityGraph(props) {
+  ReactDOM.render(<App {...props} />, document.getElementById('root'));
+}
+
+window.renderVelocityGraph = renderVelocityGraph;
+
 registerServiceWorker();
