@@ -11,11 +11,10 @@ import { getVelocity } from './issue';
 class Container extends React.Component {
 
   componentDidMount() {
-    const jql = '';
     const from = 30;
     const to = 0;
     for (let i = to; i <= from; i++) {
-      getCompletedTickets(this.props.username, this.props.password, this.props.appId, jql, i).then((issues) => {
+      getCompletedTickets(this.props.username, this.props.password, this.props.appId, this.props.jql, i).then((issues) => {
         const week = {
           weeksAgo: i,
           issues: issues,
